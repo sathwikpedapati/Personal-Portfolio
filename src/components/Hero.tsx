@@ -1,11 +1,9 @@
 import React from 'react';
 import { 
-  FaGithub, 
-  FaLinkedin, 
   FaFileDownload, 
   FaEnvelope, 
   FaMapMarkerAlt, 
-  FaPhone 
+  FaPhone
 } from 'react-icons/fa';
 
 const Hero: React.FC = () => {
