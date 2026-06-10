@@ -60,7 +60,7 @@ const projects = [
     description: 'A real-time news aggregation platform with category filters, dark/light theme, and user profiles.',
     tags: ['React', 'Node.js', 'MongoDB', 'Ant Design'],
     github: 'https://github.com/sathwikpedapati/News',
-    demo: 'https://news-six-smoky.vercel.app/login',
+    demo: 'https://news-platform-sand.vercel.app/login',
   },
 ];
 
