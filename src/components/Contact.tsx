@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
     'w-full px-4 py-2.5 text-sm bg-[#111111] border border-[#2a2a2a] rounded-lg text-white placeholder-zinc-600 focus:outline-none focus:border-[#e91e8c]/50 transition-colors';
 
   return (
-    <section id="contact" className="py-24 bg-[#080808] px-6">
+    <section id="contact" className="py-16 bg-[#080808] px-6">
       <div className="max-w-5xl mx-auto">
 
         <p className="text-xs font-semibold text-zinc-600 uppercase tracking-widest mb-3">Contact</p>

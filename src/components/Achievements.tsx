@@ -15,7 +15,7 @@ const achievements = [
 
 const Achievements: React.FC = () => {
   return (
-    <section className="py-24 bg-[#080808] px-6">
+    <section className="py-16 bg-[#080808] px-6">
       <div className="max-w-5xl mx-auto">
 
         <p className="text-xs font-semibold text-zinc-600 uppercase tracking-widest mb-3">Achievements</p>

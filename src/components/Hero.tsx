@@ -4,9 +4,9 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col justify-center bg-black px-6"
+      className="flex flex-col bg-black px-6"
     >
-      <div className="max-w-5xl mx-auto w-full pt-20 pb-28">
+      <div className="max-w-5xl mx-auto w-full pt-32 pb-20">
 
         <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-white leading-tight mb-6 tracking-tight">
           Sathwik<br />Pedapati.
