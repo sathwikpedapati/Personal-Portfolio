@@ -11,23 +11,24 @@ import Achievements from './components/Achievements';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import BottomNav from './components/BottomNav';
 
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-black">
         <Helmet>
           <title>Sathwik Pedapati | Full Stack Developer</title>
-          <meta 
-            name="description" 
-            content="Full Stack Developer specializing in React.js and Node.js. Building fast, scalable, and user-friendly web applications with real-time features and clean UI." 
+          <meta
+            name="description"
+            content="Full Stack Developer specializing in React.js and Node.js. Building fast, scalable, and user-friendly web applications with real-time features and clean UI."
           />
           <meta name="keywords" content="Full Stack Developer, React Developer, Node.js Developer, Web Developer, Portfolio, Sathwik Pedapati" />
           <meta name="author" content="Sathwik Pedapati" />
           <meta property="og:title" content="Sathwik Pedapati | Full Stack Developer" />
-          <meta 
-            property="og:description" 
-            content="Full Stack Developer specializing in React.js and Node.js. Building fast, scalable, and user-friendly web applications." 
+          <meta
+            property="og:description"
+            content="Full Stack Developer specializing in React.js and Node.js. Building fast, scalable, and user-friendly web applications."
           />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://sathwikpedapati.com" />
@@ -35,7 +36,7 @@ const App: React.FC = () => {
         </Helmet>
 
         <Navigation />
-        
+
         <main>
           <Hero />
           <About />
@@ -46,8 +47,9 @@ const App: React.FC = () => {
           <Certifications />
           <Contact />
         </main>
-        
+
         <Footer />
+        <BottomNav />
       </div>
     </Router>
   );

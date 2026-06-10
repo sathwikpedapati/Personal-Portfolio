@@ -1,86 +1,55 @@
 import React from 'react';
 
+const skillGroups = [
+  { label: 'Languages', skills: ['JavaScript', 'Python', 'Java' ] },
+  { label: 'Frontend', skills: ['React.js', 'Redux', 'Tailwind CSS', 'Bootstrap', 'Material UI', 'Ant Design'] },
+  { label: 'Backend & DB', skills: ['Node.js', 'Express.js', 'MongoDB', 'SQL', 'RESTful APIs'] },
+  { label: 'Tools', skills: ['Git', 'GitHub', 'Postman', 'VS Code'] },
+];
+
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-20 bg-white md:px-10 lg:px-20">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">About Me</h2>
-        
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          {/* Profile Image */}
-          <div className="w-full md:w-1/2">
-            <div className="max-w-md mx-auto">
-              <div className="w-80 h-80 mx-auto md:mx-0 rounded-[50%] border-4 border-blue-100 overflow-hidden">
-                <img 
-                  src="/ram.jpg"
-                  alt="Sathwik Pedapati" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
+    <section id="about" className="py-24 bg-[#080808] px-6">
+      <div className="max-w-5xl mx-auto">
+
+        <p className="text-xs font-semibold text-zinc-600 uppercase tracking-widest mb-3">About</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">Who I am</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+
+          <div>
+            <div className="w-64 h-64 rounded-2xl overflow-hidden border border-[#1f1f1f]">
+              <img
+                src="/ram.jpg"
+                alt="Sathwik Pedapati"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
-          
-          {/* About Text & Skills */}
-          <div className="w-full md:w-1/2">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Full Stack Developer and AI enthusiast with experience in building real-time, scalable, and secure applications.
-              Strong analytical and debugging skills, combined with a commitment to continuous learning and delivering 
-              high-quality, production-ready solutions.
-            </p>
-            
-            <div className="mt-8">
-              <h3 className="text-xl font-semibold mb-4">My Skills</h3>
-              
-              <div className="space-y-4">
-                {/* Languages */}
-                <div>
-                  <h4 className="text-md font-medium text-gray-800 mb-2">Languages</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {['JavaScript', 'Python', 'Java', 'C'].map((lang) => (
-                      <span key={lang} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
-                        {lang}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                
-                {/* Frontend */}
-                <div>
-                  <h4 className="text-md font-medium text-gray-800 mb-2">Frontend</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {['React.js', 'Redux', 'Tailwind CSS', 'Bootstrap', 'Material UI', 'Ant Design'].map((skill) => (
-                      <span key={skill} className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                
-                {/* Backend & Databases */}
-                <div>
-                  <h4 className="text-md font-medium text-gray-800 mb-2">Backend & Databases</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {['Node.js', 'Express.js', 'MongoDB', 'MySQL', 'RESTful APIs'].map((skill) => (
-                      <span key={skill} className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                
-                {/* Tools & Other */}
-                <div>
-                  <h4 className="text-md font-medium text-gray-800 mb-2">Tools & Other</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {['Git', 'GitHub', 'Docker', 'Postman', 'VS Code'].map((tool) => (
-                      <span key={tool} className="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
-                </div>
 
-              </div>
+          <div>
+            <p className="text-base text-zinc-400 leading-relaxed mb-8">
+              Full-Stack Developer | Competitive Programmer
+            </p>
+
+            <div className="space-y-5">
+              {skillGroups.map((group) => (
+                <div key={group.label}>
+                  <p className="text-xs font-semibold text-zinc-600 uppercase tracking-wider mb-2">
+                    {group.label}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {group.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="px-3 py-1 text-xs font-medium bg-[#111111] text-zinc-300 rounded-full border border-[#2a2a2a]"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 

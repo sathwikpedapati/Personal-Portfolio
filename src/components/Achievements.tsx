@@ -1,43 +1,39 @@
 import React from 'react';
-import { FaTrophy, FaLaptopCode } from 'react-icons/fa';
+
+const achievements = [
+  {
+    emoji: '🏆',
+    title: 'CodeChef Gold Badge',
+    description: '500+ problems solved',
+  },
+  {
+    emoji: '💻',
+    title: 'Full-Stack Applications',
+    description: 'Built 10+ production-ready full-stack apps',
+  },
+];
 
 const Achievements: React.FC = () => {
-  const achievements = [
-    {
-      icon: <FaTrophy className="w-6 h-6 text-yellow-500" />,
-      title: "CodeChef Gold Badge",
-      description: "500+ problems solved"
-    },
-    {
-      icon: <FaLaptopCode className="w-6 h-6 text-blue-500" />,
-      title: "Full-Stack Applications",
-      description: "Built 10+ full-stack apps"
-    }
-  ];
-
   return (
-    <section className="py-16 bg-white md:px-10 lg:px-20">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Achievements</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {achievements.map((achievement, index) => (
-            <div 
+    <section className="py-24 bg-[#080808] px-6">
+      <div className="max-w-5xl mx-auto">
+
+        <p className="text-xs font-semibold text-zinc-600 uppercase tracking-widest mb-3">Achievements</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">Milestones</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {achievements.map((item, index) => (
+            <div
               key={index}
-              className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition-shadow"
+              className="p-6 bg-[#0d0d0d] rounded-xl border border-[#1f1f1f] hover:border-[#e91e8c]/30 transition-colors"
             >
-              <div className="flex items-start">
-                <div className="p-3 bg-blue-50 rounded-lg mr-4">
-                  {achievement.icon}
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800">{achievement.title}</h3>
-                  <p className="text-gray-600">{achievement.description}</p>
-                </div>
-              </div>
+              <span className="text-2xl mb-3 block">{item.emoji}</span>
+              <h3 className="text-base font-semibold text-white mb-1">{item.title}</h3>
+              <p className="text-sm text-zinc-500">{item.description}</p>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

@@ -1,41 +1,38 @@
 import React from 'react';
-import { FaCertificate } from 'react-icons/fa';
+
+const certifications = [
+  {
+    title: 'Full-Stack Web Development',
+    issuer: 'Apna College',
+    date: '2024',
+  },
+];
 
 const Certifications: React.FC = () => {
-  const certifications = [
-    {
-      title: "Full-Stack Web Development",
-      issuer: "Apna College",
-      date: "2024"
-    }
-  ];
-
   return (
-    <section className="py-16 bg-gray-50 md:px-10 lg:px-20">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Certifications</h2>
-        
-        <div className="max-w-3xl mx-auto">
+    <section className="py-24 bg-black px-6">
+      <div className="max-w-5xl mx-auto">
+
+        <p className="text-xs font-semibold text-zinc-600 uppercase tracking-widest mb-3">Certifications</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">Credentials</h2>
+
+        <div className="space-y-4 max-w-2xl">
           {certifications.map((cert, index) => (
-            <div 
+            <div
               key={index}
-              className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow mb-6"
+              className="flex items-center justify-between p-5 bg-[#0d0d0d] rounded-xl border border-[#1f1f1f] hover:border-[#e91e8c]/30 transition-colors"
             >
-              <div className="flex items-start">
-                <div className="p-3 bg-blue-100 text-blue-600 rounded-lg mr-4">
-                  <FaCertificate className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800">{cert.title}</h3>
-                  <p className="text-gray-600">{cert.issuer}</p>
-                  <span className="inline-block mt-2 text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
-                    {cert.date}
-                  </span>
-                </div>
+              <div>
+                <h3 className="text-sm font-semibold text-white">{cert.title}</h3>
+                <p className="text-sm text-zinc-500 mt-0.5">{cert.issuer}</p>
               </div>
+              <span className="text-xs font-medium px-2.5 py-1 bg-[#111111] text-zinc-400 rounded-full border border-[#2a2a2a] flex-shrink-0 ml-4">
+                {cert.date}
+              </span>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
