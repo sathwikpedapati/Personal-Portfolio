@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { FaGithub, FaLinkedin, FaPaperPlane, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { SiLeetcode, SiCodechef, SiCodeforces } from 'react-icons/si';
 import emailjs from '@emailjs/browser';
-
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -113,6 +113,10 @@ const Contact: React.FC = () => {
                 <a href="https://codeforces.com/profile/sathwikpedapati275" target="_blank" rel="noopener noreferrer"
                    className="w-9 h-9 flex items-center justify-center rounded-lg bg-[#111111] border border-[#2a2a2a] text-zinc-500 hover:text-white hover:border-[#3a3a3a] transition-colors">
                   <SiCodeforces className="w-4 h-4" />
+                </a>
+                <a href="https://x.com/PedapatiSathwik" target="_blank" rel="noopener noreferrer"
+                   className="w-9 h-9 flex items-center justify-center rounded-lg bg-[#111111] border border-[#2a2a2a] text-zinc-500 hover:text-white hover:border-[#3a3a3a] transition-colors">
+                  <FaXTwitter className="w-4 h-4" />
                 </a>
               </div>
             </div>
