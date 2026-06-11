@@ -59,7 +59,7 @@ const projects = [
     image: '/news.jpeg',
     description: 'A real-time news aggregation platform with category filters, dark/light theme, and user profiles.',
     tags: ['React', 'Node.js', 'MongoDB', 'Ant Design'],
-    github: 'https://github.com/sathwikpedapati/News',
+    github: 'https://github.com/sathwikpedapati/News-Today',
     demo: 'https://news-platform-sand.vercel.app/login',
   },
 ];
