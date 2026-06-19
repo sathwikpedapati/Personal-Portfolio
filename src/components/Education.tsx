@@ -14,7 +14,7 @@ const education = [
     score: '91.9%',
   },
   {
-    degree: 'SSC',
+    degree: 'Secondary School Education',
     institution: 'Sri Chaitanya Techno School',
     duration: '2019 – 2020',
     score: '96.6%',
