@@ -18,7 +18,7 @@ const App: React.FC = () => {
     <Router>
       <div className="min-h-screen bg-black">
         <Helmet>
-          <title>Sathwik Pedapati | Full Stack Developer</title>
+          <title>Sathwik Pedapati</title>
           <meta
             name="description"
             content="Full Stack Developer specializing in React.js and Node.js. Building fast, scalable, and user-friendly web applications with real-time features and clean UI."
